@@ -30,7 +30,7 @@ import {
       case LOGIN_SUCCESS:
         return {
           ...state,
-          email: action.payload.auth,
+          phonenumber: action.payload.auth,
           error: "",
           user: action.payload,
           isAuth: true,
@@ -55,12 +55,7 @@ import {
           isAuth: true
         };
   
-      case LOGOUT:
-        return {
-          ...state,
-          isAuth: false,
-          user: {}
-        }
+     
       default:
         return state;
     }
